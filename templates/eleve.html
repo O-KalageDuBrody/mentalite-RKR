@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Élève : {{ eleve.prenom }} {{ eleve.nom }}</title>
+</head>
+<body>
+    <h1>{{ eleve.prenom }} {{ eleve.nom }}</h1>
+    <p>Âge : {{ eleve.age }}</p>
+    <h2>Notes :</h2>
+    <ul>
+        {% for matiere, notes in eleve.notes.items() %}
+            <li>{{ matiere }} : {{ notes | join(', ') if notes else 'Aucune note' }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Retour à la liste</a>
+</body>
+</html>

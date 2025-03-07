@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des élèves</title>
+</head>
+<body>
+    <h1>Liste des élèves</h1>
+    <ul>
+        {% for id, eleve in eleves.items() %}
+            <li><a href="{{ url_for('eleve', id=id) }}">{{ eleve.prenom }} {{ eleve.nom }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

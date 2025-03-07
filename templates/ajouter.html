@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un élève</title>
+</head>
+<body>
+    <h1>Ajouter un élève</h1>
+    <form action="{{ url_for('ajouter') }}" method="post">
+        <label for="id">ID :</label>
+        <input type="text" name="id" required>
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" required>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" required>
+        <label for="age">Âge :</label>
+        <input type="number" name="age" required>
+        <button type="submit">Ajouter</button>
+    </form>
+    <a href="{{ url_for('index') }}">Retour à la liste</a>
+</body>
+</html>
